@@ -29,7 +29,7 @@ if ing:
         s+=i+' '
         st.subheader(i+'Nutrition Information')
         smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/"+i)  
-        sf_df=st.dataframe(data=smoothiefroot_response.josn(),use_container_width=True)
+        sf_df=st.dataframe(data=smoothiefroot_response.json(),use_container_width=True)
     my_insert_stmt = """ insert into smoothies.public.orders(ingredients,name_on_order)
                     values ('""" + s + f"""','{name}')"""
     # st.write(my_insert_stmt)
