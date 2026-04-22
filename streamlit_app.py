@@ -36,4 +36,5 @@ if ing:
         st.success(f'Your Smoothie is ordered, {name}!', icon="✅")
 
 smoothiefroot_response = requests.get("[https://my.smoothiefroot.com/api/fruit/watermelon](https://my.smoothiefroot.com/api/fruit/watermelon)")  
-st.text(smoothiefroot_response)
+# st.text(smoothiefroot_response)
+sf_df=st.dataframe(data=smoothiefroot_response.josn(),use_container_width=True)
